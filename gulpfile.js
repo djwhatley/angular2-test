@@ -41,7 +41,7 @@ gulp.task('tsc', function () {
   return gulp.src(APP_DIR + '/**/*.ts')
   .pipe(typescript(tsCompileOpts))
   .pipe(gulp.dest(BUILD_DIR + '/app/'))
-})
+});
 
 gulp.task('tsc:w', function () {
   gulp.watch(APP_DIR + '/**/*.ts', ['tsc']);
@@ -63,7 +63,7 @@ gulp.task('less:w', function () {
 });
 
 gulp.task('static', function () {
-  return gulp.src(['index.html', 'systemjs.config.js', 'package.json'])
+  return gulp.src(['./**/*.html', 'systemjs.config.js', 'package.json'])
   .pipe(gulp.dest(BUILD_DIR));
 });
 

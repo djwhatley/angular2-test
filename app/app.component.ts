@@ -1,7 +1,12 @@
 import { Component } from '@angular/core';
 
+import { NavComponent } from './shared/nav/nav.component';
+
 @Component({
-  selector: 'my-app',
-  template: '<h1>My First Angular 2 App</h1>'
+  selector: 'app-content',
+  templateUrl: 'app/app.component.html',
+  viewProviders: [ NavComponent ]
 })
-export class AppComponent { }
+export class AppComponent {
+  message = 'Suh dude?';
+}
